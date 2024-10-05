@@ -1,0 +1,4 @@
+{
+  "extends": "@hipec/tsconfig/server.json",
+  "include": ["."],
+}

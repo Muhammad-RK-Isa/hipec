@@ -1,0 +1,19 @@
+{
+  "name": "@hipec/server",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "bun --hot index.ts",
+    "build": "bun build index.ts --outdir dist"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@hipec/tsconfig": "*",
+    "@hipec/eslint-config": "*",
+    "@hipec/prettier-config": "*"
+  },
+  "peerDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

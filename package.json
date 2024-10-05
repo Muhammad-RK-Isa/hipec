@@ -3,14 +3,24 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "db:push": "turbo -F @hipec/db push",
+    "db:studio": "turbo -F @hipec/db studio",
+    "dev": "turbo watch dev --continue",
+    "dev:server": "turbo watch dev -F @hipec/server",
+    "dev:admin": "turbo watch dev -F @hipec/admin",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
+    "ui:add": "turbo ui:add"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "^2.1.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@types/bun": "latest"
   },
   "engines": {
     "node": ">=18"
@@ -18,6 +28,10 @@
   "packageManager": "bun@1.1.29",
   "workspaces": [
     "apps/*",
-    "packages/*"
-  ]
+    "packages/*",
+    "tooling/*"
+  ],
+  "prettier": "@hipec/prettier-config",
+  "module": "index.ts",
+  "type": "module"
 }

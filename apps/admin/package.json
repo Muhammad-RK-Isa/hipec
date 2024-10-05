@@ -1,0 +1,26 @@
+{
+  "name": "@hipec/admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "vite --port=9000",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@tanstack/router-plugin": "^1.62.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.62.0",
+    "@tanstack/router-devtools": "^1.62.0",
+    "react": "^19.0.0-rc-1460d67c-20241003",
+    "react-dom": "^19.0.0-rc-1460d67c-20241003"
+  }
+}

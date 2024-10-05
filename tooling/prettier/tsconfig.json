@@ -1,0 +1,3 @@
+{
+  "extends": "@hipec/tsconfig/base.json",
+}
