@@ -1,5 +1,16 @@
+import "~/styles/globals.css";
+
 import type { Metadata } from "next";
-import "./globals.css";
+import { Poppins } from "next/font/google"
+import { cn } from "@hipec/ui/lib/utils";
+import { TooltipProvider } from "@hipec/ui/components/tooltip";
+import { Toaster } from "@hipec/ui/components/sonner";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <TooltipProvider>
+        <body className={cn(poppins.className, poppins.variable)}>
+          {children}
+        </body>
+      </TooltipProvider>
     </html>
   );
 }

@@ -10,11 +10,11 @@
     "dev": "turbo watch dev --continue",
     "dev:server": "turbo watch dev -F @hipec/server",
     "dev:admin": "turbo watch dev -F @hipec/admin",
-    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
-    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "format": "bunx --bun turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "bunx --bun turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
-    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
-    "ui:add": "turbo ui:add"
+    "lint:fix": "bunx --bun turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
+    "ui:add": "bunx --bun turbo ui:add"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

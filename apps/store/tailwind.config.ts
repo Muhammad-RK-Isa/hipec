@@ -1,23 +1,19 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+
+import baseConfig from "@hipec/tailwind-config/web"
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: [...baseConfig.content, "../../packages/ui/src/**/*.{ts, tsx}"],
+  presets: [baseConfig],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [],
 };
 export default config;
+
+// export * from "@hipec/ui/tailwind.config";

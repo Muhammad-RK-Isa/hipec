@@ -1,0 +1,9 @@
+{
+  "extends": "@hipec/tsconfig/internal-package.json",
+  "include": ["."],
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
+}

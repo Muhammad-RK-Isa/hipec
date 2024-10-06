@@ -24,15 +24,6 @@
       ],
       "outputLogs": "new-only"
     },
-    "lint": {
-      "dependsOn": [
-        "^topo",
-        "^build"
-      ],
-      "outputs": [
-        ".cache/.eslintcache"
-      ]
-    },
     "typecheck": {
       "dependsOn": [
         "^topo",
