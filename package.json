@@ -17,10 +17,10 @@
     "ui:add": "bunx --bun turbo ui:add"
   },
   "devDependencies": {
+    "@types/bun": "latest",
     "prettier": "^3.2.5",
     "turbo": "^2.1.3",
-    "typescript": "^5.4.5",
-    "@types/bun": "latest"
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=18"

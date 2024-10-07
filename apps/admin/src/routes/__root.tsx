@@ -8,12 +8,12 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <>
+    <div className='font-poppins'>
       <div className="p-2 flex gap-2 text-lg">
         <Link
           to="/"
           activeProps={{
-            className: 'font-bold',
+            className: 'font-medium',
           }}
           activeOptions={{ exact: true }}
         >
@@ -31,6 +31,6 @@ function RootComponent() {
       <hr />
       <Outlet />
       <TanStackRouterDevtools position="bottom-right" />
-    </>
+    </div>
   )
 }

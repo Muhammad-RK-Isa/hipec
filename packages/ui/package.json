@@ -38,6 +38,7 @@
     "date-fns": "^4.1.0",
     "lucide-react": "^0.447.0",
     "next-themes": "^0.3.0",
+    "react": "^19.0.0-rc-1460d67c-20241003",
     "react-day-picker": "8.10.1",
     "react-hook-form": "^7.53.0",
     "recharts": "^2.12.7",
